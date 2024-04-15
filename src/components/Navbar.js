@@ -13,10 +13,6 @@ export class Navbar extends Component {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item"><a className="nav-link active" aria-current="page" href="/business">business</a></li>
-                <li className="nav-item"><a className="nav-link active" aria-current="page" href="/sports">sports</a></li>
-                <li className="nav-item"><a className="nav-link active" aria-current="page" href="/entertainment">entainment</a></li>
-                <li className="nav-item"><a className="nav-link active" aria-current="page" href="/health">health</a></li>
-                <li className="nav-item"><a className="nav-link active" aria-current="page" href="/science">Science</a></li>
               </ul>
             </div>
           </div>
