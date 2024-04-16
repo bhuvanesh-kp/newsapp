@@ -78,10 +78,11 @@ export class News extends Component {
     return (
       <div className="container my-3">
         <div className='container d-flex justify-content-between' >
-          <button disabled={this.state.page <= 1} type="button" className='btn btn-dark' onClick={this.previousclick}>Previous</button>
-          <button type="button" className='btn btn-dark' onClick={this.nextclick}>Next</button>
+          <button disabled={this.state.page <= 1} type="button" className='btn btn-primary' onClick={this.previousclick}>Previous</button>
+          <button type="button" className='btn btn-primary' onClick={this.nextclick}>Next</button>
         </div>
         <h2 className='text-center'>TOP HEADLINES</h2>
+        <h5>Total {this.state.totalResults} results</h5>
         {/* <InfiniteScroll datalength={this.state.articles.length} next={this.fetchMoreData} hasMore ={this.state.articles.length!=this.state.totalResults} loader={<h1>Loading...</h1>}></InfiniteScroll> */}
         {this.state.loading && <Spinner />}
         <div className='row'>
@@ -93,9 +94,8 @@ export class News extends Component {
         </div>
         {this.state.loading && <Spinner />}
         <div className='container d-flex justify-content-between'>
-          <button disabled={this.state.page <= 1} type="button" className='btn btn-dark' onClick={this.previousclick}>Previous</button>
-          <h5>Total Results : {this.state.totalResults}</h5>
-          <button type="button" className='btn btn-dark' onClick={this.nextclick}>Next</button>
+          <button disabled={this.state.page <= 1} type="button" className='btn btn-primary' onClick={this.previousclick}>Previous</button>
+          <button type="button" className='btn btn-primary' onClick={this.nextclick}>Next</button>
         </div>
       </div>
     )

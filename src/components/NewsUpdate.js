@@ -4,9 +4,9 @@ export class NewsUpdate extends Component {
   render() {
     let {title ,imageUrl, newsUrl, author, source, date} = this.props;
     return (
-      <div className='my-3 bg-primary'>
-        <div className="card" style={{width:"25rem" ,height:"500px"}}>
-          <div className='card-header bg-warning'>
+      <div className='my-3'>
+        <div className="card" style={{width:"25rem" ,height:"450px"}}>
+          <div className='card-header '>
            <b>{source}</b>
           </div>
             <img src={imageUrl} className="card-img-top" alt="..." height="200px"/>
@@ -16,7 +16,7 @@ export class NewsUpdate extends Component {
               </div>
               <a href={newsUrl} className="btn btn-primary" target="_blank" rel="noreferrer">Read</a>  
             </div>
-            <div className='card-footer text-sucess'>
+            <div className='card-footer text-sucess bg-primary' style={{color:"white"}}>
               <b title="Source Title">
                 By : {author}
               </b>
