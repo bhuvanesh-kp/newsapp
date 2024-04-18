@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import NewsUpdate from './NewsUpdate'
 import Spinner from './Spinner'
 import PropTypes from 'prop-types'
-/*import InfiniteScroll from 'react-infinite-scroll-component';*/
+
 
 export class News extends Component {
 
