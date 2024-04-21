@@ -7,7 +7,7 @@ export class NewsUpdate extends Component {
       <div className='my-3'>
         <div className="card" style={{width:"25rem" ,height:"450px"}}>
           <div className='card-header '>
-           <b>{source}</b>
+           <b>{date}</b>
           </div>
             <img src={imageUrl} className="card-img-top" alt="..." height="200px"/>
             <div className="card-body">
@@ -20,7 +20,6 @@ export class NewsUpdate extends Component {
               <b title="Source Title">
                 By : {author}
               </b>
-            {date}
             </div>
         </div>
       </div>

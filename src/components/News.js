@@ -6,13 +6,13 @@ import PropTypes from 'prop-types'
 
 export class News extends Component {
 
-  static defultProps = {
+  /* static defultProps = {
     category: "general",
-  }
+  } */
 
-  static propTypes = {
+  /* static propTypes = {
     category: this.propTypes,
-  }
+  } */
 
   constructor() {
     super();
@@ -77,22 +77,33 @@ export class News extends Component {
   render() {
     return (
       <div className="container my-3">
+
+
+        {/* Providing buttons for navigation into next page */}
         <div className='container d-flex justify-content-between' >
           <button disabled={this.state.page <= 1} type="button" className='btn btn-primary' onClick={this.previousclick}>Previous</button>
           <button type="button" className='btn btn-primary' onClick={this.nextclick}>Next</button>
         </div>
+        {/* Providing buttons for navigation into next page also included with loading image for better interface*/}
+
+
+
+        {/* content of the body of the document including the navigation bar */}
         <h2 className='text-center'>TOP HEADLINES</h2>
         <h5>Total {this.state.totalResults} results</h5>
-        {/* <InfiniteScroll datalength={this.state.articles.length} next={this.fetchMoreData} hasMore ={this.state.articles.length!=this.state.totalResults} loader={<h1>Loading...</h1>}></InfiniteScroll> */}
-        {this.state.loading && <Spinner />}
-        <div className='row'>
+        {this.state.loading && <Spinner />} {/*included with loading image for better interface*/}
+        <div className='row'> {/* Nested map function to obtain vaules from the API */}
           {this.state.articles.map((element) => {
-            return (<div className='col-md-4' key={element.url}>
+            return (<div className='col-md-4' key={element.url}>  {/* Calls NewsUpdate to communicate with API */}
               <NewsUpdate author={element.author} date={element.publishedAt} title={element.title}  imageUrl={element.urlToImage} newsUrl={element.url} />
             </div>);
           })}
         </div>
-        {this.state.loading && <Spinner />}
+        {this.state.loading && <Spinner />} {/*included with loading image for better interface*/}
+
+
+
+        {/* Providing buttons for navigation into next page */}
         <div className='container d-flex justify-content-between'>
           <button disabled={this.state.page <= 1} type="button" className='btn btn-primary' onClick={this.previousclick}>Previous</button>
           <button type="button" className='btn btn-primary' onClick={this.nextclick}>Next</button>
